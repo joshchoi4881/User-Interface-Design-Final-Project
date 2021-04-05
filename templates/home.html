@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Get Hip</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+        <style>
+            #nav {
+                padding: 20px;
+                text-align: center;
+                background-color: #58afe9;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+            }
+            li {
+                padding: 5px;
+                border: 1px solid black;
+                border-radius: 25px;
+                background-color: #ecc5d8;
+                list-style-type: none;
+            }
+            li:hover {
+                background-color: #e083b0;
+            }
+            h1 {
+                color: white;
+            }
+            #intro {
+                margin: 50px;
+                text-align: center;
+            }
+            .card {
+                border-radius: 20px;
+                margin: 20px;
+                background-color: #ecc5d8;
+            }
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                background-color: #e083b0;
+            }
+            img {
+                height: 200px;
+                margin: 20px;
+            }
+        </style>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav id="nav">
+            <ul class="row justify-content-center">
+                <a class="col-2" href="{{ url_for('home') }}"><li>Learn</li></a>
+                <h1 class="col-3">Get Hip</h1>
+                <a class="col-2" href="{{ url_for('create') }}"><li>Quiz</li></a>
+            </ul>
+        </nav>
+        <div id="content">
+            <div id="intro" class="row justify-content-center">
+                <h2></h2>
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='home.js') }}"></script>
+    </body>
+</html>
